@@ -18,7 +18,7 @@ error_values = []
 for i in range(10**4):
     error_values.append(true_sample_error(20))
 
-plt.hist(error_values, bins = 100)
+plt.hist(error_values, bins=100)
 plt.xlabel('Percent error')
 plt.ylabel('Number of simulations')
 plt.show()

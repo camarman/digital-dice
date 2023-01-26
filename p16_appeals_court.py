@@ -22,7 +22,7 @@ def judge_vote(p, true_case):
     Calculating the individual votes of the judge
 
     Args:
-        p [float]: The probability that the judge makes correct decisions
+        p         [float] : The probability that the judge makes correct decisions
         true_case [string]: The true nature of the criminal
 
     Returns:
@@ -42,15 +42,15 @@ def judge_vote(p, true_case):
 
 def judge_resultA(true_case, pA, pB, pC, pD, pE):
     """
-    The final result of the judges. Every judge votes individually (part A) 
+    The final result of the judges. Every judge votes individually (part A)
 
     Args:
         true_case [string]: The true nature of the criminal
-        pA [float]: The probability that the judge A makes correct decision
-        pB [float]: The probability that the judge B makes correct decision
-        pC [float]: The probability that the judge C makes correct decision
-        pD [float]: The probability that the judge D makes correct decision
-        pE [float]: The probability that the judge E makes correct decision
+        pA        [float] : The probability that the judge A makes correct decision
+        pB        [float] : The probability that the judge B makes correct decision
+        pC        [float] : The probability that the judge C makes correct decision
+        pD        [float] : The probability that the judge D makes correct decision
+        pE        [float] : The probability that the judge E makes correct decision
 
     Returns:
         [string]: The result of the voting
@@ -71,10 +71,10 @@ def judge_resultB(true_case, pA, pB, pC, pD):
 
     Args:
         true_case [string]: The true nature of the criminal
-        pA [float]: The probability that the judge A makes correct decision
-        pB [float]: The probability that the judge B makes correct decision
-        pC [float]: The probability that the judge C makes correct decision
-        pD [float]: The probability that the judge D makes correct decision
+        pA         [float]: The probability that the judge A makes correct decision
+        pB         [float]: The probability that the judge B makes correct decision
+        pC         [float]: The probability that the judge C makes correct decision
+        pD         [float]: The probability that the judge D makes correct decision
 
     Returns:
         [string]: The result of the voting
@@ -91,24 +91,27 @@ def judge_resultB(true_case, pA, pB, pC, pD):
 
 total_case = 10**6
 
-##### Part A ####
-# # Judge E votes independently
+
+# ========== Part A ==========
+# Judge E votes independently
 
 
-# incorrect_decisionA = 0
-# for case_num in range(total_case):
-#     true_case = random_case_generator()
-#     if true_case != judge_resultA(true_case, 0.95, 0.95, 0.90, 0.90, 0.80):
-#         incorrect_decisionA += 1
-# print(incorrect_decisionA / total_case)
-
-##### Part B ####
-# Judge E votes the same as Judge A
-
-incorrect_decisionB = 0
+incorrect_decisionA = 0
 for case_num in range(total_case):
     true_case = random_case_generator()
-    if true_case != judge_resultB(true_case, 0.95, 0.95, 0.90, 0.90):
-        incorrect_decisionB += 1
+    if true_case != judge_resultA(true_case, 0.95, 0.95, 0.90, 0.90, 0.80):
+        incorrect_decisionA += 1
+print(incorrect_decisionA / total_case)
 
-print(incorrect_decisionB / total_case)
+
+# ========== Part B ==========
+# Judge E votes the same as Judge A
+
+
+# incorrect_decisionB = 0
+# for case_num in range(total_case):
+#     true_case = random_case_generator()
+#     if true_case != judge_resultB(true_case, 0.95, 0.95, 0.90, 0.90):
+#         incorrect_decisionB += 1
+
+# print(incorrect_decisionB / total_case)

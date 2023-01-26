@@ -14,10 +14,9 @@ def is_rain(p):
     Determines if it's going to rain or not for a given probability
 
     Args:
-        p [float]: the probability of raining. Take values between 0 and 1
+        p [float]: The probability of raining. Take values between 0 and 1
 
-    Returns:
-        True, if its going to rain and false if it's not going to rain
+    Returns [boolean]: True, if its going to rain, otherwise; returns false
     """
     prob_rain = uniform(0, 1)
     if prob_rain > p:
@@ -48,12 +47,12 @@ def prob_wet_calc(p, home_umbrella_num, office_umbrella_num):
     the umbrella numbers for the both locations
 
     Args:
-        p [float]: the probability of raining. Takes values between 0 and 1
-        home_umbrella_num [int]: The number of umbrellas at the home 
+        p                 [float]: The probability of raining. Takes values between 0 and 1
+        home_umbrella_num   [int]: The number of umbrellas at the home
         office_umbrella_num [int]: The number of umbrellas at the office
 
     Returns:
-        the average time of getting wet
+        The average time of getting wet
     """
     time = 0
     current_position = 'home'
@@ -83,7 +82,7 @@ avg_time_values = []
 for p in p_values:
     avg_time = 0
     for i in range(step_size):
-        time = prob_wet_calc(p, 2, 2) # In this case we have (1, 1) umbrella
+        time = prob_wet_calc(p, 2, 2) # in this case we have (1, 1) umbrella
         avg_time += time
     avg_time_values.append(avg_time / step_size)
 

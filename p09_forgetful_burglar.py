@@ -9,7 +9,7 @@ def next_town():
     Calculating the step to the next town by using random.uniform
 
     Returns:
-        [int]: the next movement of the burglar
+        [int]: The next movement of the burglar
     """
     step_num = uniform(0, 1)
     if 0 <= step_num < 0.25:

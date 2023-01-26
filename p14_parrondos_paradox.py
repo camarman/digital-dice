@@ -8,12 +8,15 @@ from numpy import array, zeros
 
 def gameA(capital, probH=1/2, eps=0.005):
     """
-    Calculating the result of a coin toss, given that the probability of a head and the epsilon(e)
+    Calculating the result of a coin toss, given that the probability
+    of a head and the epsilon(e)
 
     Args:
-        capital [int]: The money of the gambler
-        probH [float, optional]: The probability of obtaining head from a biased coin. The value must be between (0-1). Defaults to 1/2.
-        eps [float, optional]: the deviation from the biased coin probability. Defaults to 0.005.
+        capital [int]            : The money owned by the gambler
+        probH   [float, optional]: The probability of obtaining heads from a biased coin.
+                                   The value must be between (0-1). Defaults to 1/2.
+        eps     [float, optional]: The deviation from the biased coin probability.
+                                   Defaults to 0.005.
 
     Returns:
         capital [int]: The money of the gambler after the coin toss
@@ -30,10 +33,13 @@ def gameB(capital, coin1_probH=1/10, coin2_probH=3/4, eps=0.005):
     Calculating the result of a coin toss, given that the probability of a head and the epsilon(e)
 
     Args:
-        capital [int]: The money of the gambler
-        coin1_probH [float, optional]: The probability of obtaining head from a biased coin 1. The value must be between (0-1). Defaults to 1/10.
-        coin2_probH [float, optional]: The probability of obtaining head from a biased coin 2. The value must be between (0-1). Defaults to 3/4.
-        eps [float, optional]: the deviation from the biased coin probability. Defaults to 0.005.
+        capital     [int]            : The money of the gambler
+        coin1_probH [float, optional]: The probability of obtaining head from a biased coin 1.
+                                       The value must be between (0-1). Defaults to 1/10.
+        coin2_probH [float, optional]: The probability of obtaining head from a biased coin 2.
+                                       The value must be between (0-1). Defaults to 3/4.
+        eps         [float, optional]: The deviation from the biased coin probability.
+                                       Defaults to 0.005.
 
     Returns:
         capital [int]: The money of the gambler after the coin toss
@@ -89,12 +95,12 @@ def play_game2():
 step_size = 10**5
 k_values = [i for i in range(1, 101)]
 
-#### Part A####
+# ========== Part A ==========
+
 
 # Mk1 = zeros(100)
 # for sequence in range(step_size):
 #     Mk1 += play_game1() / step_size
-
 
 # plt.plot(k_values, Mk1, label='$\\varepsilon = 0.005$')
 # plt.xlabel('Number of coin flips')
@@ -104,12 +110,12 @@ k_values = [i for i in range(1, 101)]
 # plt.show()
 
 
-#### Part B ####
+# ========== Part B ==========
+
 
 Mk2 = zeros(100)
 for sequence in range(step_size):
     Mk2 += play_game2() / step_size
-
 
 plt.plot(k_values, Mk2, label='$\\varepsilon = 0.005$')
 plt.xlabel('Number of coin flips')

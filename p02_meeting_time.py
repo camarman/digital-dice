@@ -9,12 +9,12 @@ def meeting(lils_waiting_time, bills_waiting_time, waiting_interval):
     Investigating the condition where the Lil and Bill meet or not
 
     Args:
-        lils_waiting_time [int]: Lil's waiting time in minutes
+        lils_waiting_time  [int]: Lil's waiting time in minutes
         bills_waiting_time [int]: Bill's waiting time in minutes
-        waiting_interval [int]: the meeting interval in minutes
+        waiting_interval   [int]: The meeting interval in minutes
 
     Returns:
-        True if they ever meet, otherwise returns False
+        True if they ever meet, otherwise; returns False
     """
     lils_mt = uniform(0, 1)
     bills_mt = uniform(0, 1)

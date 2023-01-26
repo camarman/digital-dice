@@ -10,9 +10,9 @@ def coin_comparison(coin_types, coin_num_l, coin_num_m, coin_num_n):
 
     Args:
         coin_types [list]: The type of the coin as 'TTH', 'HHH', 'THH' etc.
-        coin_num_l [int]: The number of the coins that player 'l' has
-        coin_num_m [int]: The number of the coins that player 'm' has
-        coin_num_n [int]: The number of the coins that player 'n' has
+        coin_num_l  [int]: The number of the coins that player 'l' has
+        coin_num_m  [int]: The number of the coins that player 'm' has
+        coin_num_n  [int]: The number of the coins that player 'n' has
 
     Returns:
         The number of coins for the each player
